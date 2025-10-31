@@ -44,8 +44,8 @@ app.get('/health', (req, res) => {
 });
 
 // Importar rutas (descomentar cuando las tengas)
-// const mealRoutes = require('./src/routes/mealRoutes');
-// app.use('/api/meals', mealRoutes);
+const mealRoutes = require('./src/routes/mealRoutes');
+app.use('/api/meals', mealRoutes);
 
 // Manejo de errores 404
 app.use((req, res) => {
